@@ -1,0 +1,105 @@
+#restaurant-list {
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+#restaurant-menu {
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+@media screen and (max-width: 450px) {
+    .header-nav{
+        z-index: 10;
+        background-color: #fff;
+        width: 300px;
+        position: absolute;
+
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-600px, 0);
+
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .nav-item {
+        display: list-item;
+        border-bottom: 1px solid #E0E0E0;
+        width: 95%;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 450px) {
+    .header-menu {
+        visibility: hidden;
+        position: absolute;
+        top: -30px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .header-logo {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .header-nav {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .post-item__content {
+        padding: 16px 32px 32px 32px;
+    }
+
+    .post-item__title {
+        font-size: 18px;
+    }
+
+    .post-item__description {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #restaurant-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+    #restaurant-menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #restaurant-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #restaurant-menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+    }
+}
